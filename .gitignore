@@ -1,33 +1,27 @@
-HELP.md
+# Maven
 target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+*.class
+*.jar
+*.war
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
+# IDE files
+.idea/
+.eclipse/
 *.iml
-*.ipr
+.settings/
+.classpath
+.project
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# Logs
+*.log
+ecommerce-app.log
 
-### VS Code ###
-.vscode/
+# H2 Database file
+data/
+*.db
+*.mv.db
+*.trace.db
+
+# OS files
+.DS_Store
+Thumbs.db
