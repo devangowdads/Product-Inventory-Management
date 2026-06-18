@@ -1,0 +1,1087 @@
+2026-06-18T15:08:20.814+05:30  INFO 9292 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 9292 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T15:08:20.823+05:30  INFO 9292 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T15:08:22.344+05:30  INFO 9292 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T15:08:22.422+05:30  INFO 9292 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interface.
+2026-06-18T15:08:23.608+05:30  INFO 9292 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-18T15:08:23.636+05:30  INFO 9292 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T15:08:23.637+05:30  INFO 9292 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T15:08:23.725+05:30  INFO 9292 --- [Product_Inventory_Management_DB] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2837 ms
+2026-06-18T15:08:23.883+05:30  WARN 9292 --- [Product_Inventory_Management_DB] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.h2.Driver
+2026-06-18T15:08:23.889+05:30  INFO 9292 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-18T15:08:23.919+05:30  INFO 9292 --- [Product_Inventory_Management_DB] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-18T15:08:23.940+05:30 ERROR 9292 --- [Product_Inventory_Management_DB] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.h2.Driver
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
+	at com.ecommerce.ProductInventoryManagementDbApplication.main(ProductInventoryManagementDbApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.h2.Driver
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 10 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.h2.Driver
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1232) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1711) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 20 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.h2.Driver
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:183) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 34 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot load driver class: org.h2.Driver
+	at org.springframework.util.Assert.state(Assert.java:102) ~[spring-core-7.0.8.jar:7.0.8]
+	at org.springframework.boot.jdbc.autoconfigure.DataSourceProperties.findDriverClassName(DataSourceProperties.java:187) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
+	at org.springframework.boot.jdbc.autoconfigure.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:177) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
+	at org.springframework.boot.jdbc.autoconfigure.PropertiesJdbcConnectionDetails.getDriverClassName(PropertiesJdbcConnectionDetails.java:51) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
+	at org.springframework.boot.jdbc.autoconfigure.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:63) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
+	at org.springframework.boot.jdbc.autoconfigure.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:128) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 37 common frames omitted
+
+2026-06-18T15:10:02.245+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 23208 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T15:10:02.250+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T15:10:03.716+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T15:10:03.822+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 1 JPA repository interface.
+2026-06-18T15:10:05.111+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-18T15:10:05.147+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T15:10:05.148+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T15:10:05.226+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2904 ms
+2026-06-18T15:10:05.524+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T15:10:05.765+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-18T15:10:06.261+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T15:10:06.303+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T15:10:06.505+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=SA
+2026-06-18T15:10:06.508+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T15:10:06.541+05:30  WARN 23208 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T15:10:06.567+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:inventorydb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORYDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T15:10:07.717+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T15:10:07.783+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T15:10:07.886+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-18T15:10:08.358+05:30  WARN 23208 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T15:10:09.133+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-18T15:10:09.141+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 7.877 seconds (process running for 8.774)
+2026-06-18T15:10:09.145+05:30  WARN 23208 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T15:10:09.145+05:30  WARN 23208 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T15:13:00.420+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T15:13:00.830+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [RMI TCP Connection(6)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T15:13:01.191+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T15:13:01.265+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T15:13:01.386+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T15:13:01.404+05:30  INFO 23208 --- [Product_Inventory_Management_DB] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T15:13:25.915+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 15036 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T15:13:25.919+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T15:13:27.074+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T15:13:27.166+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interface.
+2026-06-18T15:13:30.619+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-06-18T15:13:31.160+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T15:13:31.163+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T15:13:31.276+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 5299 ms
+2026-06-18T15:13:31.552+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T15:13:31.717+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-18T15:13:32.701+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T15:13:32.830+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T15:13:33.300+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=SA
+2026-06-18T15:13:33.306+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T15:13:33.427+05:30  WARN 15036 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T15:13:33.532+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:inventorydb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORYDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T15:13:36.804+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T15:13:36.914+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T15:13:37.177+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-18T15:13:38.342+05:30  WARN 15036 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T15:13:39.894+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-06-18T15:13:39.918+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 14.606 seconds (process running for 16.121)
+2026-06-18T15:13:39.924+05:30  WARN 15036 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T15:13:39.924+05:30  WARN 15036 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T15:14:39.426+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T15:14:39.426+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T15:14:39.429+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-18T15:14:39.806+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] c.e.controller.ProductController         : Received request to create product: Wireless Mouse
+2026-06-18T15:14:41.420+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] c.e.controller.ProductController         : Product created successfully with id: 1
+2026-06-18T15:15:10.333+05:30  WARN 15036 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.ecommerce.dto.ProductResponseDto> com.ecommerce.controller.ProductController.createProduct(com.ecommerce.dto.ProductRequestDto): [Field error in object 'productRequestDto' on field 'name': rejected value []; codes [NotBlank.productRequestDto.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [productRequestDto.name,name]; arguments []; default message [name]]; default message [Product name is required]] ]
+2026-06-18T15:15:30.719+05:30  WARN 15036 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.ecommerce.dto.ProductResponseDto> com.ecommerce.controller.ProductController.createProduct(com.ecommerce.dto.ProductRequestDto): [Field error in object 'productRequestDto' on field 'category': rejected value []; codes [NotBlank.productRequestDto.category,NotBlank.category,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [productRequestDto.category,category]; arguments []; default message [category]]; default message [Category is required]] ]
+2026-06-18T15:17:07.955+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [RMI TCP Connection(8)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T15:17:08.072+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [RMI TCP Connection(8)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T15:17:08.171+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T15:17:08.186+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [RMI TCP Connection(8)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T15:17:08.222+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T15:17:08.229+05:30  INFO 15036 --- [Product_Inventory_Management_DB] [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T15:18:20.026+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 24288 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T15:18:20.030+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T15:18:21.408+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T15:18:21.502+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 1 JPA repository interface.
+2026-06-18T15:18:22.851+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-06-18T15:18:22.886+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T15:18:22.887+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T15:18:22.957+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2858 ms
+2026-06-18T15:18:23.198+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T15:18:23.314+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-18T15:18:24.099+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T15:18:24.155+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T15:18:24.519+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=SA
+2026-06-18T15:18:24.521+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T15:18:24.604+05:30  WARN 24288 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T15:18:24.663+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:inventorydb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORYDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T15:18:26.609+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T15:18:26.654+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T15:18:26.763+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-18T15:18:27.453+05:30  WARN 24288 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T15:18:27.986+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-06-18T15:18:27.994+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 8.888 seconds (process running for 10.185)
+2026-06-18T15:18:27.997+05:30  WARN 24288 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T15:18:27.997+05:30  WARN 24288 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T15:18:35.234+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T15:18:35.235+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T15:18:35.241+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-06-18T15:19:54.559+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-3] c.e.controller.ProductController         : Fetching product with id: 1
+2026-06-18T15:20:06.272+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-5] c.e.controller.ProductController         : Received request to create product: Wireless Mouse
+2026-06-18T15:20:08.005+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-5] c.e.controller.ProductController         : Product created successfully with id: 1
+2026-06-18T15:20:12.704+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-6] c.e.controller.ProductController         : Fetching product with id: 1
+2026-06-18T15:20:12.718+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-6] c.e.controller.ProductController         : Product fetched successfully with id: 1
+2026-06-18T15:20:23.278+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-9] c.e.controller.ProductController         : Fetching product with id: 1
+2026-06-18T15:20:23.284+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-9] c.e.controller.ProductController         : Product fetched successfully with id: 1
+2026-06-18T15:20:32.825+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T15:20:32.831+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [RMI TCP Connection(4)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T15:20:32.917+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T15:20:32.931+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [RMI TCP Connection(4)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T15:20:32.937+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T15:20:32.939+05:30  INFO 24288 --- [Product_Inventory_Management_DB] [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T15:21:27.677+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 22480 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T15:21:27.683+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T15:21:29.363+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T15:21:29.486+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interface.
+2026-06-18T15:21:30.479+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-06-18T15:21:30.505+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T15:21:30.506+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T15:21:30.604+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2862 ms
+2026-06-18T15:21:30.843+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T15:21:30.929+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-18T15:21:31.695+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T15:21:31.777+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T15:21:32.197+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=SA
+2026-06-18T15:21:32.200+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T15:21:32.254+05:30  WARN 22480 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T15:21:32.298+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:inventorydb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORYDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T15:21:33.748+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T15:21:33.811+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T15:21:33.932+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-18T15:21:34.581+05:30  WARN 22480 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T15:21:35.486+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-06-18T15:21:35.495+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 8.527 seconds (process running for 9.659)
+2026-06-18T15:21:35.498+05:30  WARN 22480 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T15:21:35.499+05:30  WARN 22480 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T15:21:49.281+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T15:21:49.281+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T15:21:49.284+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-18T15:21:49.669+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] c.e.controller.ProductController         : Received request to create product: Wireless Mouse
+2026-06-18T15:21:51.027+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] c.e.controller.ProductController         : Product created successfully with id: 1
+2026-06-18T15:21:55.844+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-3] c.e.controller.ProductController         : Fetching product with id: 1
+2026-06-18T15:21:55.940+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-3] c.e.controller.ProductController         : Product fetched successfully with id: 1
+2026-06-18T15:25:52.704+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-6] c.e.controller.ProductController         : Received request to update product with id: 1
+2026-06-18T15:26:07.816+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-7] c.e.controller.ProductController         : Received request to update product with id: 1
+2026-06-18T15:26:29.376+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-8] c.e.controller.ProductController         : Received request to update product with id: 1
+2026-06-18T15:28:03.960+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T15:28:04.813+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [RMI TCP Connection(10)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T15:28:05.579+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T15:28:05.742+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [RMI TCP Connection(10)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T15:28:06.019+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T15:28:06.063+05:30  INFO 22480 --- [Product_Inventory_Management_DB] [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T15:29:09.498+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 23512 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T15:29:09.510+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T15:29:12.290+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T15:29:12.418+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 1 JPA repository interface.
+2026-06-18T15:29:14.132+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-06-18T15:29:14.166+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T15:29:14.166+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T15:29:14.264+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 4582 ms
+2026-06-18T15:29:14.721+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T15:29:15.007+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-18T15:29:16.811+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T15:29:16.949+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T15:29:17.984+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=SA
+2026-06-18T15:29:17.990+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T15:29:18.056+05:30  WARN 23512 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T15:29:18.099+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:inventorydb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORYDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T15:29:21.715+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T15:29:21.908+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T15:29:22.271+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-18T15:29:23.692+05:30  WARN 23512 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T15:29:25.636+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-06-18T15:29:25.666+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 17.921 seconds (process running for 20.226)
+2026-06-18T15:29:25.688+05:30  WARN 23512 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T15:29:25.689+05:30  WARN 23512 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T15:29:32.715+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T15:29:32.718+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T15:29:32.728+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2026-06-18T15:29:33.393+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] c.e.controller.ProductController         : Received request to create product: Wireless Mouse
+2026-06-18T15:29:40.229+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] c.e.controller.ProductController         : Product created successfully with id: 1
+2026-06-18T15:29:48.370+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-5] c.e.controller.ProductController         : Received request to update product with id: 1
+2026-06-18T15:29:48.586+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-5] c.e.controller.ProductController         : Product updated successfully with id: 1
+2026-06-18T15:30:22.168+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-4] c.e.controller.ProductController         : Fetching all products
+2026-06-18T15:30:22.268+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-4] c.e.controller.ProductController         : Total products fetched: 1
+2026-06-18T15:30:42.581+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-6] c.e.controller.ProductController         : Received request to create product: Wireless Mouse22222
+2026-06-18T15:30:42.642+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-6] c.e.controller.ProductController         : Product created successfully with id: 2
+2026-06-18T15:30:48.680+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-3] c.e.controller.ProductController         : Fetching all products
+2026-06-18T15:30:48.721+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-3] c.e.controller.ProductController         : Total products fetched: 2
+2026-06-18T15:32:50.852+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-7] c.e.controller.ProductController         : Fetching product with id: 2
+2026-06-18T15:32:50.967+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-7] c.e.controller.ProductController         : Product fetched successfully with id: 2
+2026-06-18T15:32:57.899+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-9] c.e.controller.ProductController         : Fetching all products
+2026-06-18T15:32:57.962+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-9] c.e.controller.ProductController         : Total products fetched: 2
+2026-06-18T15:33:00.792+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-8] c.e.controller.ProductController         : Fetching product with id: 2
+2026-06-18T15:33:00.813+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-8] c.e.controller.ProductController         : Product fetched successfully with id: 2
+2026-06-18T15:35:21.360+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-5] c.e.controller.InventoryController       : Received request to increase stock for product id: 1 by quantity: 10
+2026-06-18T15:35:21.491+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-5] c.e.controller.InventoryController       : Stock increased successfully for product id: 1
+2026-06-18T15:35:25.807+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] c.e.controller.InventoryController       : Received request to increase stock for product id: 1 by quantity: 10
+2026-06-18T15:35:25.844+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] c.e.controller.InventoryController       : Stock increased successfully for product id: 1
+2026-06-18T15:36:14.860+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-4] c.e.controller.InventoryController       : Received request to decrease stock for product id: 1 by quantity: 10
+2026-06-18T15:36:14.920+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-4] c.e.controller.InventoryController       : Stock decrease successfully for product id: 1
+2026-06-18T15:36:17.334+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-6] c.e.controller.InventoryController       : Received request to decrease stock for product id: 1 by quantity: 10
+2026-06-18T15:36:17.354+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-6] c.e.controller.InventoryController       : Stock decrease successfully for product id: 1
+2026-06-18T15:37:19.924+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-8] c.e.controller.InventoryController       : Received request to decrease stock for product id: 1 by quantity: 10
+2026-06-18T15:37:19.982+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-8] c.e.controller.InventoryController       : Stock decrease successfully for product id: 1
+2026-06-18T15:37:21.424+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] c.e.controller.InventoryController       : Received request to decrease stock for product id: 1 by quantity: 10
+2026-06-18T15:37:21.439+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] c.e.controller.InventoryController       : Stock decrease successfully for product id: 1
+2026-06-18T15:37:22.600+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-10] c.e.controller.InventoryController       : Received request to decrease stock for product id: 1 by quantity: 10
+2026-06-18T15:37:22.657+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-10] c.e.controller.InventoryController       : Stock decrease successfully for product id: 1
+2026-06-18T15:37:24.069+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-5] c.e.controller.InventoryController       : Received request to decrease stock for product id: 1 by quantity: 10
+2026-06-18T15:37:24.091+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-5] c.e.controller.InventoryController       : Stock decrease successfully for product id: 1
+2026-06-18T15:37:25.271+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] c.e.controller.InventoryController       : Received request to decrease stock for product id: 1 by quantity: 10
+2026-06-18T15:37:25.290+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] c.e.controller.InventoryController       : Stock decrease successfully for product id: 1
+2026-06-18T15:37:26.748+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-4] c.e.controller.InventoryController       : Received request to decrease stock for product id: 1 by quantity: 10
+2026-06-18T15:37:58.004+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-9] c.e.controller.ProductController         : Received request to create product: Wireless Mouse
+2026-06-18T15:37:58.084+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-9] c.e.controller.ProductController         : Product created successfully with id: 3
+2026-06-18T15:38:13.237+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T15:38:13.396+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [RMI TCP Connection(11)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T15:38:13.723+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T15:38:13.843+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [RMI TCP Connection(11)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T15:38:13.903+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T15:38:13.927+05:30  INFO 23512 --- [Product_Inventory_Management_DB] [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T15:45:43.857+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 22536 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T15:45:43.862+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T15:45:45.279+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T15:45:45.353+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interface.
+2026-06-18T15:45:46.350+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-06-18T15:45:46.372+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T15:45:46.373+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T15:45:46.440+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2522 ms
+2026-06-18T15:45:46.823+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T15:45:47.039+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-18T15:45:47.597+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T15:45:47.652+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T15:45:47.891+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=SA
+2026-06-18T15:45:47.893+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T15:45:47.929+05:30  WARN 22536 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T15:45:47.954+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:inventorydb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORYDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T15:45:49.043+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T15:45:49.109+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T15:45:49.237+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-18T15:45:50.080+05:30  WARN 22536 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T15:45:51.124+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-06-18T15:45:51.131+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 8.027 seconds (process running for 9.298)
+2026-06-18T15:45:51.135+05:30  WARN 22536 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T15:45:51.135+05:30  WARN 22536 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T15:46:29.019+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T15:46:29.020+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T15:46:29.028+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2026-06-18T15:46:29.551+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] c.e.controller.ProductController         : Received request to create product: Wireless Mouse
+2026-06-18T15:46:30.825+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] c.e.controller.ProductController         : Product created successfully with id: 1
+2026-06-18T15:46:32.544+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-4] c.e.controller.ProductController         : Received request to create product: Wireless Mouse
+2026-06-18T15:46:46.665+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-3] c.e.controller.ProductController         : Fetching all products
+2026-06-18T15:46:46.833+05:30  WARN 22536 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-3] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-06-18T15:50:14.973+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-9] c.e.controller.ProductController         : Received request to create product: Wireless Mouse
+2026-06-18T15:51:27.471+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T15:51:27.629+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [RMI TCP Connection(9)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T15:51:28.008+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T15:51:28.068+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [RMI TCP Connection(9)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T15:51:28.143+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T15:51:28.164+05:30  INFO 22536 --- [Product_Inventory_Management_DB] [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T15:51:43.624+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 5052 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T15:51:43.634+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T15:51:45.375+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T15:51:45.481+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 1 JPA repository interface.
+2026-06-18T15:51:46.630+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-06-18T15:51:46.661+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T15:51:46.661+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T15:51:46.788+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3040 ms
+2026-06-18T15:51:47.129+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T15:51:47.292+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-18T15:51:47.955+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T15:51:48.025+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T15:51:48.274+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=SA
+2026-06-18T15:51:48.277+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T15:51:48.329+05:30  WARN 5052 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T15:51:48.374+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:inventorydb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORYDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T15:51:49.544+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T15:51:49.591+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T15:51:49.703+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-18T15:51:50.592+05:30  WARN 5052 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T15:51:51.701+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-06-18T15:51:51.736+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 9.915 seconds (process running for 12.077)
+2026-06-18T15:51:51.747+05:30  WARN 5052 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T15:51:51.749+05:30  WARN 5052 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T15:51:59.211+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T15:51:59.212+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T15:51:59.220+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-06-18T15:51:59.703+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] c.e.controller.ProductController         : Received request to create product: Wireless Mouse
+2026-06-18T15:52:01.720+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] c.e.controller.ProductController         : Product created successfully with id: 1
+2026-06-18T15:53:42.592+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T15:53:42.637+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [RMI TCP Connection(5)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T15:53:42.741+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T15:53:42.754+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [RMI TCP Connection(5)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T15:53:42.785+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T15:53:42.789+05:30  INFO 5052 --- [Product_Inventory_Management_DB] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T15:57:09.881+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 9052 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T15:57:09.887+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T15:57:11.419+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T15:57:11.512+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 1 JPA repository interface.
+2026-06-18T15:57:12.755+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-06-18T15:57:12.783+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T15:57:12.784+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T15:57:12.903+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2951 ms
+2026-06-18T15:57:13.153+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T15:57:13.336+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-18T15:57:14.382+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T15:57:14.454+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T15:57:14.745+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=SA
+2026-06-18T15:57:14.747+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T15:57:14.825+05:30  WARN 9052 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T15:57:14.857+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:inventorydb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORYDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T15:57:16.654+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T15:57:16.726+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T15:57:16.873+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-18T15:57:17.376+05:30  WARN 9052 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T15:57:18.308+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-06-18T15:57:18.330+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 9.212 seconds (process running for 10.686)
+2026-06-18T15:57:18.337+05:30  WARN 9052 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T15:57:18.337+05:30  WARN 9052 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T15:57:24.950+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T15:57:24.951+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T15:57:24.954+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-18T15:57:25.453+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] c.e.controller.ProductController         : Received request to create product: Wireless Mouse
+2026-06-18T15:57:27.756+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] c.e.controller.ProductController         : Product created successfully with id: 1
+2026-06-18T16:01:05.939+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [RMI TCP Connection(7)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T16:01:06.110+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [RMI TCP Connection(7)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T16:01:06.483+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T16:01:06.530+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [RMI TCP Connection(7)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:01:06.606+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T16:01:06.617+05:30  INFO 9052 --- [Product_Inventory_Management_DB] [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T16:05:33.107+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 25044 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T16:05:33.112+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T16:05:34.849+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T16:05:34.914+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2026-06-18T16:05:35.894+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-06-18T16:05:35.923+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T16:05:35.924+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T16:05:36.010+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2802 ms
+2026-06-18T16:05:36.410+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T16:05:36.622+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-18T16:05:38.097+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T16:05:38.165+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T16:05:38.591+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=SA
+2026-06-18T16:05:38.593+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T16:05:38.633+05:30  WARN 25044 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T16:05:38.660+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:inventorydb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORYDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T16:05:40.385+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T16:05:40.491+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:05:40.598+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-18T16:05:41.330+05:30  WARN 25044 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T16:05:42.357+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-06-18T16:05:42.374+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 10.234 seconds (process running for 11.488)
+2026-06-18T16:05:42.383+05:30  WARN 25044 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T16:05:42.384+05:30  WARN 25044 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T16:05:52.399+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T16:05:52.400+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T16:05:52.403+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-06-18T16:07:08.578+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T16:07:08.659+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [RMI TCP Connection(5)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T16:07:08.834+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T16:07:08.847+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [RMI TCP Connection(5)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:07:08.861+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T16:07:08.866+05:30  INFO 25044 --- [Product_Inventory_Management_DB] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T16:07:39.423+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 11844 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T16:07:39.428+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T16:07:41.182+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T16:07:41.317+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interface.
+2026-06-18T16:07:42.885+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-06-18T16:07:42.950+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T16:07:42.952+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T16:07:43.109+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3607 ms
+2026-06-18T16:07:43.565+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T16:07:44.055+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-18T16:07:45.409+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T16:07:45.491+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T16:07:45.935+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=SA
+2026-06-18T16:07:45.941+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T16:07:46.008+05:30  WARN 11844 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T16:07:46.065+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:inventorydb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORYDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T16:07:51.001+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T16:07:51.055+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:07:51.213+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-18T16:07:51.715+05:30  WARN 11844 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T16:07:52.249+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-06-18T16:07:52.266+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 13.798 seconds (process running for 14.853)
+2026-06-18T16:07:52.272+05:30  WARN 11844 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T16:07:52.272+05:30  WARN 11844 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T16:07:56.436+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T16:07:56.437+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T16:07:56.441+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-06-18T16:08:50.690+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T16:08:50.711+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [RMI TCP Connection(3)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T16:08:50.875+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T16:08:50.884+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [RMI TCP Connection(3)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:08:50.889+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [RMI TCP Connection(3)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T16:08:50.895+05:30  INFO 11844 --- [Product_Inventory_Management_DB] [RMI TCP Connection(3)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T16:09:11.743+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 7936 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T16:09:11.752+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T16:09:13.599+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T16:09:13.664+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interface.
+2026-06-18T16:09:14.590+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-06-18T16:09:14.618+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T16:09:14.619+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T16:09:14.740+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2859 ms
+2026-06-18T16:09:15.089+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T16:09:15.253+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-18T16:09:16.346+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T16:09:16.456+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T16:09:16.746+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=SA
+2026-06-18T16:09:16.748+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T16:09:16.796+05:30  WARN 7936 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T16:09:16.831+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:inventorydb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORYDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T16:09:18.663+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T16:09:18.761+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:09:18.872+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-18T16:09:19.550+05:30  WARN 7936 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T16:09:20.347+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-06-18T16:09:20.362+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 9.568 seconds (process running for 10.887)
+2026-06-18T16:09:20.367+05:30  WARN 7936 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T16:09:20.367+05:30  WARN 7936 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T16:09:28.444+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T16:09:28.445+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T16:09:28.447+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-18T16:10:09.472+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1074 ms
+2026-06-18T16:11:00.587+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T16:11:00.630+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [RMI TCP Connection(5)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T16:11:00.823+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T16:11:00.853+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [RMI TCP Connection(5)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:11:00.905+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T16:11:00.915+05:30  INFO 7936 --- [Product_Inventory_Management_DB] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T16:27:21.694+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 25396 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T16:27:21.698+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T16:27:22.956+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T16:27:23.031+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interface.
+2026-06-18T16:27:24.032+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-06-18T16:27:24.053+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T16:27:24.053+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-18T16:27:24.139+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2383 ms
+2026-06-18T16:27:24.459+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-18T16:27:24.610+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-18T16:27:25.247+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T16:27:25.316+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T16:27:25.686+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=MANAGEMENT
+2026-06-18T16:27:25.688+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T16:27:25.737+05:30  WARN 25396 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T16:27:25.787+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:inventorydb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: INVENTORYDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T16:27:27.443+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T16:27:27.538+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:27:27.685+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-18T16:27:28.334+05:30  WARN 25396 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T16:27:29.241+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-06-18T16:27:29.262+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 8.368 seconds (process running for 9.582)
+2026-06-18T16:27:29.270+05:30  WARN 25396 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-18T16:27:29.270+05:30  WARN 25396 --- [Product_Inventory_Management_DB] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-18T16:27:36.784+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T16:27:36.785+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T16:27:36.787+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-18T16:30:03.755+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T16:30:03.876+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [RMI TCP Connection(6)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T16:30:04.062+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-18T16:30:04.100+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:30:04.147+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T16:30:04.155+05:30  INFO 25396 --- [Product_Inventory_Management_DB] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T16:32:12.589+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 13328 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T16:32:12.604+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T16:32:12.899+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 27676 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T16:32:12.950+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T16:32:13.644+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 19924 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T16:32:13.704+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T16:32:24.747+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T16:32:25.127+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 324 ms. Found 1 JPA repository interface.
+2026-06-18T16:32:25.166+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T16:32:25.482+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 225 ms. Found 1 JPA repository interface.
+2026-06-18T16:32:25.493+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T16:32:25.728+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 193 ms. Found 1 JPA repository interface.
+2026-06-18T16:32:30.689+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-06-18T16:32:30.694+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-06-18T16:32:30.801+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T16:32:30.802+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-06-18T16:32:30.841+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T16:32:30.842+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-06-18T16:32:31.456+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-06-18T16:32:31.508+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-18T16:32:31.513+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 18002 ms
+2026-06-18T16:32:31.527+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-18T16:32:31.530+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 16777 ms
+2026-06-18T16:32:31.547+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T16:32:31.553+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-06-18T16:32:31.971+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-18T16:32:31.972+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 18215 ms
+2026-06-18T16:32:32.666+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-18T16:32:32.686+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-18T16:32:33.302+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-06-18T16:32:33.611+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-18T16:32:33.818+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-06-18T16:32:34.029+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-18T16:32:36.154+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-18T16:32:36.558+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T16:32:36.757+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T16:32:36.936+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-06-18T16:32:37.280+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-18T16:32:38.738+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=MANAGEMENT
+2026-06-18T16:32:38.754+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T16:32:39.117+05:30  WARN 13328 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T16:32:39.456+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T16:32:39.927+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T16:32:40.300+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T16:32:42.429+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=MANAGEMENT
+2026-06-18T16:32:42.438+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T16:32:42.550+05:30  WARN 19924 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T16:32:42.644+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T16:32:46.087+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T16:32:46.289+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T16:32:46.371+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T16:32:46.716+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:32:48.839+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=MANAGEMENT
+2026-06-18T16:32:48.862+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T16:32:49.037+05:30  WARN 27676 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T16:32:49.397+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T16:32:49.857+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T16:32:50.735+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:32:51.404+05:30  WARN 13328 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T16:32:56.005+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:inventorydb'
+2026-06-18T16:32:58.051+05:30  WARN 19924 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T16:32:58.078+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-06-18T16:32:58.163+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 47.93 seconds (process running for 49.806)
+2026-06-18T16:32:59.877+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:inventorydb'
+2026-06-18T16:33:00.130+05:30  WARN 19924 --- [Product_Inventory_Management_DB] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-06-18T16:33:00.135+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:33:00.148+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T16:33:00.156+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T16:33:00.229+05:30  INFO 19924 --- [Product_Inventory_Management_DB] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-18T16:33:00.385+05:30 ERROR 19924 --- [Product_Inventory_Management_DB] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2026-06-18T16:33:01.255+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T16:33:01.407+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:33:03.115+05:30  WARN 27676 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T16:33:04.279+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:inventorydb'
+2026-06-18T16:33:04.540+05:30  WARN 27676 --- [Product_Inventory_Management_DB] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-06-18T16:33:04.552+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:33:04.579+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T16:33:04.598+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T16:33:04.735+05:30  INFO 27676 --- [Product_Inventory_Management_DB] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-18T16:33:04.825+05:30 ERROR 27676 --- [Product_Inventory_Management_DB] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2026-06-18T16:33:10.178+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T16:33:10.194+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [RMI TCP Connection(2)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T16:33:10.497+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-06-18T16:33:10.517+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:33:10.550+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T16:33:10.566+05:30  INFO 13328 --- [Product_Inventory_Management_DB] [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T16:33:29.825+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 12096 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T16:33:29.828+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T16:33:31.240+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T16:33:31.341+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 1 JPA repository interface.
+2026-06-18T16:33:32.559+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-06-18T16:33:32.685+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T16:33:32.686+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-06-18T16:33:32.793+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-18T16:33:32.794+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2911 ms
+2026-06-18T16:33:33.082+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-18T16:33:33.210+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-06-18T16:33:33.293+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-18T16:33:33.916+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T16:33:33.956+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T16:33:34.246+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=MANAGEMENT
+2026-06-18T16:33:34.248+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T16:33:34.284+05:30  WARN 12096 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T16:33:34.310+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T16:33:35.454+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T16:33:35.544+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:33:36.265+05:30  WARN 12096 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T16:33:36.850+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:inventorydb'
+2026-06-18T16:33:36.998+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2026-06-18T16:33:37.015+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 7.973 seconds (process running for 9.239)
+2026-06-18T16:34:06.947+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T16:34:06.959+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T16:34:06.987+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 26 ms
+2026-06-18T16:37:27.659+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-5] c.e.controller.ProductController         : Received request to create product: Wireless Mouse
+2026-06-18T16:37:27.651+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-10] c.e.controller.ProductController         : Received request to create product: Wireless Mouse
+2026-06-18T16:37:29.524+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-5] c.e.controller.ProductController         : Product created successfully with id: 2
+2026-06-18T16:37:29.526+05:30  WARN 12096 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2026-06-18T16:37:29.526+05:30 ERROR 12096 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.CONSTRAINT_INDEX_F ON PUBLIC.PRODUCTS(NAME NULLS FIRST) VALUES ( /* 2 */ 'Wireless Mouse' )"; SQL statement:
+insert into products (category,created_at,name,price,quantity,updated_at,id) values (?,?,?,?,?,?,default) [23505-232]
+2026-06-18T16:38:45.444+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [RMI TCP Connection(7)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T16:38:45.507+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [RMI TCP Connection(7)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T16:38:45.712+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-06-18T16:38:45.745+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [RMI TCP Connection(7)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:38:45.794+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T16:38:45.807+05:30  INFO 12096 --- [Product_Inventory_Management_DB] [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T16:38:57.576+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 22156 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T16:38:57.579+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T16:38:59.075+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T16:38:59.220+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122 ms. Found 1 JPA repository interface.
+2026-06-18T16:39:00.200+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-06-18T16:39:00.228+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T16:39:00.228+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-06-18T16:39:00.325+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-18T16:39:00.326+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2682 ms
+2026-06-18T16:39:00.618+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-18T16:39:00.759+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-06-18T16:39:00.840+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-18T16:39:01.313+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T16:39:01.380+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T16:39:01.743+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=MANAGEMENT
+2026-06-18T16:39:01.746+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T16:39:01.792+05:30  WARN 22156 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T16:39:01.818+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T16:39:03.317+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T16:39:03.426+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:39:04.147+05:30  WARN 22156 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T16:39:04.870+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:inventorydb'
+2026-06-18T16:39:05.015+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2026-06-18T16:39:05.029+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 8.273 seconds (process running for 9.361)
+2026-06-18T16:39:11.484+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T16:39:11.486+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T16:39:11.492+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-06-18T16:39:11.919+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-2] c.e.controller.ProductController         : Received request to create product: Wireless Mouse
+2026-06-18T16:39:13.573+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-2] c.e.controller.ProductController         : Product created successfully with id: 1
+2026-06-18T16:39:22.452+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-4] c.e.controller.ProductController         : Received request to create product: Wireless 
+2026-06-18T16:39:22.516+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-4] c.e.controller.ProductController         : Product created successfully with id: 2
+2026-06-18T16:40:57.357+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T16:40:57.420+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [RMI TCP Connection(4)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T16:40:57.598+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-06-18T16:40:57.629+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [RMI TCP Connection(4)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:40:57.731+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T16:40:57.738+05:30  INFO 22156 --- [Product_Inventory_Management_DB] [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T16:43:29.385+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 26740 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T16:43:29.391+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T16:43:31.132+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T16:43:31.258+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 1 JPA repository interface.
+2026-06-18T16:43:32.456+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-06-18T16:43:32.478+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T16:43:32.479+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-06-18T16:43:32.555+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-18T16:43:32.555+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3098 ms
+2026-06-18T16:43:32.820+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-18T16:43:32.958+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-06-18T16:43:33.025+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-18T16:43:33.645+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T16:43:33.709+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T16:43:34.109+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=MANAGEMENT
+2026-06-18T16:43:34.112+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T16:43:34.195+05:30  WARN 26740 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T16:43:34.258+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T16:43:35.898+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T16:43:35.964+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:43:36.428+05:30  WARN 26740 --- [Product_Inventory_Management_DB] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'global_InventoryException' defined in file [C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes\com\ecommerce\exception\Global_InventoryException.class]: Failed to instantiate [com.ecommerce.exception.Global_InventoryException]: Constructor threw exception
+2026-06-18T16:43:36.429+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:43:36.439+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T16:43:36.445+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T16:43:36.446+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-18T16:43:36.464+05:30  INFO 26740 --- [Product_Inventory_Management_DB] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-18T16:43:36.488+05:30 ERROR 26740 --- [Product_Inventory_Management_DB] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'global_InventoryException' defined in file [C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes\com\ecommerce\exception\Global_InventoryException.class]: Failed to instantiate [com.ecommerce.exception.Global_InventoryException]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1242) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.6.jar:3.5.6]
+	at com.ecommerce.ProductInventoryManagementDbApplication.main(ProductInventoryManagementDbApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.ecommerce.exception.Global_InventoryException]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:123) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1351) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 19 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	Syntax error on token "}", delete this token
+
+	at com.ecommerce.exception.Global_InventoryException.<init>(Global_InventoryException.java:61) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 21 common frames omitted
+
+2026-06-18T16:43:49.270+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 1384 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T16:43:49.274+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T16:43:50.542+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T16:43:50.718+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135 ms. Found 1 JPA repository interface.
+2026-06-18T16:43:51.906+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-06-18T16:43:51.921+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T16:43:51.922+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-06-18T16:43:51.981+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-18T16:43:51.982+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2658 ms
+2026-06-18T16:43:52.222+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-18T16:43:52.389+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-06-18T16:43:52.423+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-18T16:43:52.875+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T16:43:52.908+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T16:43:53.273+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=MANAGEMENT
+2026-06-18T16:43:53.281+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T16:43:53.354+05:30  WARN 1384 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T16:43:53.383+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T16:43:55.070+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T16:43:55.186+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:43:56.159+05:30  WARN 1384 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T16:43:56.882+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:inventorydb'
+2026-06-18T16:43:57.023+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2026-06-18T16:43:57.033+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 8.64 seconds (process running for 9.671)
+2026-06-18T16:44:50.101+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T16:44:50.129+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [RMI TCP Connection(3)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T16:44:50.238+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-06-18T16:44:50.255+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [RMI TCP Connection(3)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:44:50.299+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [RMI TCP Connection(3)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T16:44:50.308+05:30  INFO 1384 --- [Product_Inventory_Management_DB] [RMI TCP Connection(3)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T16:45:11.984+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 22492 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T16:45:11.987+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T16:45:13.275+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T16:45:13.349+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2026-06-18T16:45:13.982+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-06-18T16:45:14.000+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T16:45:14.001+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-06-18T16:45:14.072+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-18T16:45:14.073+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2034 ms
+2026-06-18T16:45:14.303+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-18T16:45:14.384+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-06-18T16:45:14.434+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-18T16:45:14.860+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T16:45:14.900+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T16:45:15.120+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=MANAGEMENT
+2026-06-18T16:45:15.121+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T16:45:15.160+05:30  WARN 22492 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T16:45:15.188+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T16:45:16.587+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T16:45:16.645+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:45:17.459+05:30  WARN 22492 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T16:45:18.022+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:inventorydb'
+2026-06-18T16:45:18.144+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2026-06-18T16:45:18.173+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 7.088 seconds (process running for 8.12)
+2026-06-18T16:45:32.401+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T16:45:32.407+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [RMI TCP Connection(2)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T16:45:32.566+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-06-18T16:45:32.571+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:45:32.576+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T16:45:32.579+05:30  INFO 22492 --- [Product_Inventory_Management_DB] [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T16:45:44.805+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Starting ProductInventoryManagementDbApplication using Java 17.0.12 with PID 22328 (C:\Stackly_WorkSpace\Product_Inventory_Management_DB\target\classes started by devan in C:\Stackly_WorkSpace\Product_Inventory_Management_DB)
+2026-06-18T16:45:44.807+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T16:45:45.978+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-18T16:45:46.068+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interface.
+2026-06-18T16:45:46.777+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-06-18T16:45:46.796+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T16:45:46.797+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-06-18T16:45:46.853+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-18T16:45:46.853+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2004 ms
+2026-06-18T16:45:47.066+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-18T16:45:47.205+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-06-18T16:45:47.235+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-18T16:45:47.694+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-18T16:45:47.793+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T16:45:48.048+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventorydb user=MANAGEMENT
+2026-06-18T16:45:48.053+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T16:45:48.084+05:30  WARN 22328 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-18T16:45:48.106+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-18T16:45:49.211+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-18T16:45:49.273+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:45:50.052+05:30  WARN 22328 --- [Product_Inventory_Management_DB] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-18T16:45:50.623+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:inventorydb'
+2026-06-18T16:45:50.773+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2026-06-18T16:45:50.818+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [main] .ProductInventoryManagementDbApplication : Started ProductInventoryManagementDbApplication in 6.99 seconds (process running for 7.78)
+2026-06-18T16:45:57.840+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T16:45:57.843+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T16:45:57.848+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-06-18T16:46:22.218+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-06-18T16:46:22.224+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [RMI TCP Connection(4)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T16:46:22.396+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-06-18T16:46:22.406+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [RMI TCP Connection(4)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-18T16:46:22.410+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T16:46:22.413+05:30  INFO 22328 --- [Product_Inventory_Management_DB] [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
